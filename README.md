@@ -24,8 +24,8 @@ To run this project, you need to have Python and the following libraries install
 - scikit-learn
 - shap
 
-You can install these libraries using pip:
-```bash
+## You can install these libraries using pip:
+
 pip install numpy matplotlib yfinance scikit-learn shap
 
 ## Usage
@@ -39,6 +39,7 @@ cd stock-price-prediction
 ## Run the main script:
 
 python app.py
+
 
 ## Functions
 download_data(companies, start_date, end_date): Downloads historical stock data for the given companies within the specified date range.
