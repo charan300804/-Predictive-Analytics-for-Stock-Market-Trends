@@ -1,99 +1,44 @@
-# -Predictive-Analytics-for-Stock-Market-Trends
+# 📈 Predictive Analytics for Stock Market Trends
 
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&style=for-the-badge)](https://www.python.org/)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Model-F7931E?logo=scikit-learn&style=for-the-badge)](https://scikit-learn.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data-150458?logo=pandas&style=for-the-badge)](https://pandas.pydata.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-Math-013243?logo=numpy&style=for-the-badge)](https://numpy.org/)
 
-This project implements a stock price prediction model using Support Vector Regression (SVR). It leverages historical stock data, processes the data, performs feature engineering, and tunes model parameters for accurate predictions.
+This project implements a stock price forecasting system using machine learning. It leverages Support Vector Regression (SVR) and historical stock price data, applies feature engineering and data preprocessing, and performs parameter tuning to predict market trends.
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Functions](#functions)
-- [Feature Engineering](#feature-engineering)
-- [Model Evaluation](#model-evaluation)
-- [Visualization](#visualization)
-- [Acknowledgements](#acknowledgements)
+---
 
-## Introduction
-The purpose of this project is to build a model that can predict stock prices based on historical data. The model uses SVR, which is known for its effectiveness in regression tasks. The project involves data preprocessing, feature engineering, parameter tuning, and evaluation.
+## 🚀 Key Features
 
-## Installation
-To run this project, you need to have Python and the following libraries installed:
-- numpy
-- matplotlib
-- yfinance
-- scikit-learn
-- shap
+- **📊 Advanced Feature Engineering**: Calculates simple moving averages (SMA), historical volatility, daily returns, and trading volume indexes.
+- **🤖 Support Vector Regression (SVR)**: Trains and compares SVR models with RBF, Linear, and Polynomial kernels to identify the best fit.
+- **📈 Dynamic Visualizations**: Interactive plotting showing historical trends, kernel forecasts, and error margins.
+- **⚙️ Model Hyperparameter Tuning**: Utilizes Grid Search optimization to find the best `C`, `epsilon`, and `gamma` settings.
 
-## You can install these libraries using pip:
+---
 
-pip install numpy matplotlib yfinance scikit-learn shap
+## 🛠️ Tech Stack
 
-## Usage
-Clone the repository:
+- **Language**: Python 3.8+
+- **Machine Learning**: Scikit-Learn
+- **Data Engineering**: Pandas, NumPy
+- **Data Visualization**: Matplotlib
 
-git clone https://github.com/charan300804/stock-price-prediction.git
-## Navigate to the project directory:
+---
 
-cd stock-price-prediction
+## 🚀 Getting Started
 
-## Run the main script:
-
-python app.py
-
-
-## Functions
-download_data(companies, start_date, end_date): Downloads historical stock data for the given companies within the specified date range.
-
-preprocess_data(data): Preprocesses the data by filling missing values, capping outliers, and normalizing the 'Close' prices.
-
-feature_engineering(data): Adds new features to the data, such as moving averages, momentum, volatility, and RSI.
-
-parameter_tuning(data, companies): Tunes the SVR model parameters using GridSearchCV and evaluates the model.
-
-evaluate_model(model, X, y, company): Evaluates the model using cross-validation and various metrics, and plots the results.
-
-plot_results(y_test, y_pred, company): Plots the actual vs. predicted stock prices.
-
-residual_analysis(y_test, y_pred, company): Analyzes the residuals of the model.
-
-plot_feature_importance(model, X_test): Plots the feature importance using SHAP values.
-
-### Feature Engineering
-Feature engineering involves creating additional features from the existing data to improve the predictive power of the model. In this project, the following features are created:
-
-10_MA: 10-day moving average of the 'Close' prices.
-
-100_MA: 100-day moving average of the 'Close' prices.
-
-Momentum: Difference between the current 'Close' price and the 'Close' price 10 days ago.
-
-Volatility: Standard deviation of the 'Close' prices over a 10-day window.
-
-RSI: Relative Strength Index, calculated over a 14-day window.
-
-## Model Evaluation
-The SVR model is evaluated using the following metrics:
-
-Root Mean Squared Error (RMSE)
-
-Mean Squared Error (MSE)
-
-R-squared (R²)
-
-Mean Absolute Error (MAE)
-
-## Visualization
-The project includes various visualizations to help understand the model's performance:
-
-Actual vs. Predicted Stock Prices
-
-Residuals Over Time
-
-Feature Importance using SHAP values
-
-## Acknowledgements
-The yfinance library for providing easy access to historical stock data.
-
-The scikit-learn library for powerful machine learning tools.
-
-The shap library for interpreting machine learning models.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/charan300804/-Predictive-Analytics-for-Stock-Market-Trends.git
+   cd -Predictive-Analytics-for-Stock-Market-Trends
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run prediction model:
+   ```bash
+   python app.py
+   ```
